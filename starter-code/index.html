@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+
+  <div class="container">
+    <p class="title">Password Generator</p>
+      <div class="generate-password">
+        <p class="password-text"></p>
+        <div class="copy"><img src="./assets/images/icon-copy.svg" alt=""></div>
+      </div>
+      <div class="panel-generator">
+        <div class="panel-generator-lenght-container">
+          <p class="panel-generator-lenght-container-text">Character-lenght</p>
+          <p class="value">0</p>
+        </div>
+        <div class="range-slider">
+          <input type="range" min="1" max="20" value="0" class="slider">
+          <div class="slider-thumb">
+            <div class="tooltip"></div>
+          </div> 
+          <div class="progress"></div>
+        </div>
+        <div class="checkboxes">
+          <p>
+            <input type="checkbox" id="uppercase" class="checkbox uppercase" value="uppercase" name="uppercase">
+            <label for="">Include Uppercase Letters</label>
+          </p>
+          <p>
+            <input type="checkbox" id="lowercase" class="checkbox lowercase" value="lowecase" name="lowercase">
+            <label for="">Include Lowercase Letters</label>
+          </p>
+          <p>
+            <input type="checkbox" id="numbers" class="checkbox numbers" value="numbers" name="numbers">
+            <label for="">Include numbers</label>
+          </p>
+          <p>
+            <input type="checkbox" id="symbols" class="checkbox symbols" value="symbols" name="symbols">
+            <label for="">Include Symbols</label>
+          </p>
+        </div>
+        <button class="btn">Generate</button>
+      </div>
+  </div>
+</body>
+</html>
