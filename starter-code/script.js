@@ -52,3 +52,4 @@ generateBtn.addEventListener('click', () => {
   passwordText.textContent = "No characters selected"
   }
 });
+
