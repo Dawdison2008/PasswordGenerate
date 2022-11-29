@@ -7,6 +7,7 @@ const slider = document.querySelector('input')
 const value = document.querySelector('.value')
 const passwordText = document.querySelector('.password-text')
 const generateBtn = document.querySelector('.btn')
+const copy = document.querySelector('.copy')
 
 //sldier i number
 value.textContent = slider.value
@@ -49,7 +50,25 @@ generateBtn.addEventListener('click', () => {
   if (array.length > 1) {
     passwordText.textContent = passwordGen(value.textContent, array)
    } else{
-  passwordText.textContent = "No characters selected"
+    error()
   }
 });
+
+const error = () =>{
+  passwordText.textContent = "No characters selected"
+  
+  setTimeout(() =>{
+    passwordText.textContent = ''
+  }, 2000)
+}
+copy.addEventListener('click', () => {
+  copyToClipboard(passwordText.textContent)
+})
+
+const copyToClipboard = (password) => {
+  navigator.clipboard.writeText(password)
+  passwordText.textContent = 'You copied password'
+}
+
+
 
